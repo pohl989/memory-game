@@ -21,24 +21,31 @@ h1{
   border-bottom:double 2px #1e1e1e;
   }
 
+#center {
+  margin: auto;
+}
+
 .card{
-  height:140px;
-  width:100px;
+  height:160px;
+  width:120px;
   margin:8px;
   float:left;
   border-radius: 10px;
   box-shadow: rgba(72,72,72,0.2) 2px 3px 0 0;
-  background: #ddd;
+  background: #eee;
   border:solid 1px rgba(90,9,77,0.2);
+  border-radius: 8px;
 }
 
 .card-image {
-  height:110px;
-  width:90px;
+  height:140px;
+  width:110px;
   margin:10px auto 0 auto;
   color:white;
   box-shadow(0 0 20px rgba(0,0,0,0.4));
   border: 1px solid #bbb;
+  background-size: cover;
+  background-position: center;
 }
 
 #gameArea {
@@ -58,15 +65,15 @@ h1{
 }
 
 /* cards imagers */
-.adoreDelano { background-image: url(images/adoreDelano.jpeg)}
-.alyssaEdwards { background-image: url(images/adoreDelano.jpeg)}
-.jigglyCaliente { background-image: url(images/jigglyCaliente.jpeg)}
-.jinxMonsoon { background-image: url(images/jinxMonsoon.jpeg)}
-.jujubee { background-image: url(images/jujubee.jpeg)}
-.kimChi { background-image: url(images/kimChi.jpeg)}
-.missFame { background-image: url(images/missFame.jpeg)}
-.raja { background-image: url(images/raja.jpeg)}
-.raven { background-image: url(images/raven.jpeg)}
-.sharronNeedles { background-image: url(images/sharronNeedles.jpeg)}
-.sheaCoulee { background-image: url(images/sheaCoulee.jpeg)}
-.violetChachki{ background-image: url(images/violetChachki.jpeg)}
+.card-image.adoreDelano { background-image: url(images/adoreDelano.jpeg)}
+.card-image.alyssaEdwards { background-image: url(images/alyssaEdwards.jpeg)}
+.card-image.jigglyCaliente { background-image: url(images/jigglyCaliente.jpeg)}
+.card-image.jinxMonsoon { background-image: url(images/jinxMonsoon.jpeg)}
+.card-image.jujubee { background-image: url(images/jujubee.jpeg)}
+.card-image.kimChi { background-image: url(images/kimChi.jpeg)}
+.card-image.missFame { background-image: url(images/missFame.jpeg)}
+.card-image.raja { background-image: url(images/raja.jpeg)}
+.card-image.raven { background-image: url(images/raven.jpeg)}
+.card-image.sharronNeedles { background-image: url(images/sharronNeedles.jpeg)}
+.card-image.sheaCoulee { background-image: url(images/sheaCoulee.jpeg)}
+.card-image.violetChachki{ background-image: url(images/violetChachki.jpeg)}

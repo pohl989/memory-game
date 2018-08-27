@@ -70,9 +70,10 @@ $(document).ready(function() {
       currentCorrect = currentCorrect + 2
       checkforWin()
     } else {
+      // We need the delay so the user can glimpse the second card
       setTimeout( function() {
-        $('#' + pickId[0]).delay( 800 ).removeClass('flip')
-        $('#' + pickId[1]).delay( 800 ).removeClass('flip')
+        $('#' + pickId[0]).delay( 600 ).removeClass('flip')
+        $('#' + pickId[1]).delay( 600 ).removeClass('flip')
         attempts = attempts + 1
         attemptMessage.text("Failed Attempts: " + attempts)
       }, 800);
@@ -100,9 +101,10 @@ $(document).ready(function() {
 
   $('#startGame').on('click', function(){
 
-    //Ask for number of cards 
+    //Ask for the difficulty set the # of Queens
     getDifficulty()
-    // hide start 
+
+    // hide start, remove old game, reset values, add new cards 
     resetGame()
 
     //picking cards
@@ -110,17 +112,15 @@ $(document).ready(function() {
       var choice = $(this).data('name')
       var choiceId = $(this).attr('id')
       var correct = $(this).hasClass('correct')
-      console.log('Clicked card')
   
+      //The flip class will display the background image on the card
       $(this).addClass('flip')
-      console.log(correct)
-      //set pick array variables if card has not flipped
+      //Lets update what picks the user has && make sure they are not picking already matched sets
       correct === false ? updatePicks(choice, choiceId) : null
-  
-      if (pick.length == 2) {
-        removeIfMatched()
-      }  else {
-      }
+      
+      //If the user has two choices lets see if they match
+      pick.length === 2 ? removeIfMatched() : null
+        
     })
   })
 

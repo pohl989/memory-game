@@ -8,7 +8,7 @@ body{
   margin:0;
   padding:0; 
   background: rgb(229, 91, 91);
-  }
+}
 
 h1{
   text-align:center;
@@ -51,17 +51,21 @@ h1{
 #gameArea {
   margin: auto;
   width: 50%;
-  border: 3px solid #1e1e1e;
+  /* border: 3px solid #1e1e1e; */
   padding: 10px;
   margin: auto;
   width: 80%;
   height: 640px;
-  background: rgba(100, 144, 214, .9);
+  /* background: rgba(100, 144, 214, .9); */
   margin: 15px auto 20px auto;
   padding: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  /* -moz-border-radius: 10px; */
+  /* -webkit-border-radius: 10px; */
+  /* border-radius: 10px; */
+}
+
+.card-image.blank {
+  /* just blank realnes */
 }
 
 /* cards imagers */

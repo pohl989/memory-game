@@ -3,12 +3,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>Memory Game</title>
 </head>
 <body>
-  <div>
-    <h1><span>Drag Queen Memory Game</span></h1>
+  <h1><span>Drag Queen Memory Game</span></h1>
+
+  <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <h2 class="d-none" id="attempts">Failed Attempts: 0</h2>
+          <div class="form-inline" id="startContainer" >
+            <div class="form-group">
+                <label id= "difficultyLabel">Choose a Difficulty</label>
+                <select class="form-control" name="" id="difficulty">
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                </select>
+                <button id="startGame" class="btn btn-success btn-large btn-inverse pull-right">Start Game</button>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
+    </div>
+  <div> 
     <div class="center">
       <div id="gameArea">
         <!--cards are added here via Javasript-->

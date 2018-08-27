@@ -77,6 +77,14 @@ h1{
 
 }
 
+#startGame {
+  margin-left: 20px;
+}
+
+#difficultyLabel {
+  margin-right: 20px;
+}
+
 /* cards imagers */
 .flip.card .card-image.adoreDelano { background-image: url(images/adoreDelano.jpeg)}
 .flip.card .card-image.alyssaEdwards { background-image: url(images/alyssaEdwards.jpeg)}

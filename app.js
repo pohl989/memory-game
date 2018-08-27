@@ -2,12 +2,12 @@ $(document).ready(function() {
   //Varables
   var gameArea = $('#gameArea')
 
-  var easy = ['adoreDelano', 'alyssaEdwards', 'jigglyCaliente', 'adoreDelano', 'alyssaEdwards', 'jigglyCaliente']
-  var medium = ['jinxMonsoon', 'jujubee', 'kimChi', 'missFame', 'raja', 'raven', 'sharronNeedles', 'sheaCoulee', 'violetChachki', 'jinxMonsoon', 'jujubee', 'kimChi', 'missFame', 'raja', 'raven', 'sharronNeedles', 'sheaCoulee', 'violetChachki']
+  var easy = ['adoreDelano', 'alyssaEdwards', 'jigglyCaliente', 'adoreDelano', 'alyssaEdwards', 'jigglyCaliente', 'missFame', 'missFame']
+  var medium = ['jinxMonsoon', 'jujubee', 'kimChi', 'raja', 'raven', 'sharronNeedles', 'sheaCoulee', 'violetChachki', 'jinxMonsoon', 'jujubee', 'kimChi', 'raja', 'raven', 'sharronNeedles', 'sheaCoulee', 'violetChachki']
   var hard = ['adoreDelano', 'alyssaEdwards', 'jigglyCaliente', 'jinxMonsoon', 'jujubee', 'kimChi', 'missFame', 'raja', 'raven', 'sharronNeedles', 'sheaCoulee', 'violetChachki', 'adoreDelano', 'alyssaEdwards', 'jigglyCaliente', 'jinxMonsoon', 'jujubee', 'kimChi', 'missFame', 'raja', 'raven', 'sharronNeedles', 'sheaCoulee', 'violetChachki']
   
   //easy list
-  var listOfQueens, attempts
+  var listOfQueens, attempts, currentCorrect, maxCorrect
   var pick = [];
   var pickId = [];
   var attemptMessage = $('#attempts')
@@ -53,12 +53,22 @@ $(document).ready(function() {
     pickId.length == 2 ? pickId = [id] : pickId.push(id); 
   }
 
+  //Check for win 
+  function checkforWin() {
+    if (currentCorrect === maxCorrect) {
+      attemptMessage.text("You Win!!! Play Again?").addClass('winner')
+      $('#startContainer').removeClass('d-none')
+    }
+  }
+
   // remove cards if match
   function removeIfMatched() {
     //check for match & make sure they don't click the same card
     if (pick[0] === pick[1] && pickId[0] !== pickId[1]) {
       $('#' + pickId[0]).addClass('correct')
       $('#' + pickId[1]).addClass('correct')
+      currentCorrect = currentCorrect + 2
+      checkforWin()
     } else {
       setTimeout( function() {
         $('#' + pickId[0]).delay( 800 ).removeClass('flip')
@@ -70,21 +80,32 @@ $(document).ready(function() {
     }
   }
 
-
-  $('#startGame').on('click', function(){
+  function resetGame() {
     attempts = 0
-    //Ask for number of cards 
-    getDifficulty()
-    // hide start 
+    currentCorrect = 0
+    attemptMessage.text("Failed Attempts: " + attempts)
     $('#startContainer').addClass('d-none')
-    $('#attempts').removeClass('d-none')
-
+    $('#attempts').removeClass('d-none').removeClass('winner')
+    //remove old game stuff
+    $('#gameArea').empty()
     //Shuffle list of cards
     shuffleArray(listOfQueens)
     // put cards on table
     addCardToGameArea(listOfQueens)
-    //put cards on the table
 
+    //need the count to win;
+    maxCorrect = listOfQueens.length
+  }
+
+
+  $('#startGame').on('click', function(){
+
+    //Ask for number of cards 
+    getDifficulty()
+    // hide start 
+    resetGame()
+
+    //picking cards
     $('.card').on('click', function() {
       var choice = $(this).data('name')
       var choiceId = $(this).attr('id')

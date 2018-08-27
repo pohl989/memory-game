@@ -33,6 +33,7 @@ h1{
   justify-content: center;
 }
 
+
 .card{
   height:160px;
   width:120px;
@@ -88,13 +89,13 @@ h1{
 /* cards imagers */
 .flip.card .card-image.adoreDelano { background-image: url(images/adoreDelano.jpeg)}
 .flip.card .card-image.alyssaEdwards { background-image: url(images/alyssaEdwards.jpeg)}
-.card-image.jigglyCaliente { background-image: url(images/jigglyCaliente.jpeg)}
-.card-image.jinxMonsoon { background-image: url(images/jinxMonsoon.jpeg)}
-.card-image.jujubee { background-image: url(images/jujubee.jpeg)}
-.card-image.kimChi { background-image: url(images/kimChi.jpeg)}
-.card-image.missFame { background-image: url(images/missFame.jpeg)}
-.card-image.raja { background-image: url(images/raja.jpeg)}
-.card-image.raven { background-image: url(images/raven.jpeg)}
-.card-image.sharronNeedles { background-image: url(images/sharronNeedles.jpeg)}
-.card-image.sheaCoulee { background-image: url(images/sheaCoulee.jpeg)}
-.card-image.violetChachki{ background-image: url(images/violetChachki.jpeg)}
+.flip.card .card-image.jigglyCaliente { background-image: url(images/jigglyCaliente.jpeg)}
+.flip.card .card-image.jinxMonsoon { background-image: url(images/jinxMonsoon.jpeg)}
+.flip.card .card-image.jujubee { background-image: url(images/jujubee.jpeg)}
+.flip.card .card-image.kimChi { background-image: url(images/kimChi.jpeg)}
+.flip.card .card-image.missFame { background-image: url(images/missFame.jpeg)}
+.flip.card .card-image.raja { background-image: url(images/raja.jpeg)}
+.flip.card .card-image.raven { background-image: url(images/raven.jpeg)}
+.flip.card .card-image.sharronNeedles { background-image: url(images/sharronNeedles.jpeg)}
+.flip.card .card-image.sheaCoulee { background-image: url(images/sheaCoulee.jpeg)}
+.flip.card .card-image.violetChachki{ background-image: url(images/violetChachki.jpeg)}
